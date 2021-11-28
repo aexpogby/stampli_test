@@ -34,9 +34,8 @@ export class AppComponent {
           console.log("SELECT should have at least 1 option")
           return false;
         }
-        if (props.inputType.toLowerCase() == 'text_input' && props.options[0] !=""){
-          console.log("To many properties for TEXT_INPUT");
-          return false;
+        if (props.inputType.toLowerCase() == 'text_input'){
+          props.options = [];
         }
         
         return true;
@@ -67,7 +66,7 @@ export class AppComponent {
         elementProps[2] || "",
         elementProps[3] || "",
         elementProps[4] || "",
-        elementProps[5].split(",")
+        elementProps[4].split(",")
       );
 
       row = parseInt(elementProps[0]) || -1;
