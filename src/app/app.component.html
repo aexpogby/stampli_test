@@ -5,8 +5,8 @@
     <div *ngFor="let row of rows; let i = index" class="row">
         <div *ngFor="let column of rows[i]; let j = index" class="col col-sm-12 col-1 col-xl">
             <label>{{column.label}}</label>
-            <input type="text" *ngIf="column.inputType == 'text_input'" value="{{column.value}}" />
-            <select *ngIf="column.inputType == 'select'" >
+            <input type="text" *ngIf="column.inputType.toLowerCase() == 'text_input'" placeholder="{{column.value}}" />
+            <select *ngIf="column.inputType.toLowerCase() == 'select'" >
                 <option *ngFor="let option of column.options" value="{{option}}">
                     {{option}}
                 </option>

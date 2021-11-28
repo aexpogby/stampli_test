@@ -12,7 +12,7 @@ export class AppComponent {
     "select": true,
     "text_input": true
   }
-  
+
   rows!:FormElement[][];
   maxRows!:number;
   maxColumns!:number;
@@ -29,12 +29,12 @@ export class AppComponent {
 
 
   propsValidator(props:FormElement){
-    if (this.ELEMENT_TYPES.hasOwnProperty(props.inputType.toLocaleLowerCase())){
-        if (props.inputType.toLocaleLowerCase() == 'select' && props.options[0] ==""){
+    if (this.ELEMENT_TYPES.hasOwnProperty(props.inputType.toLowerCase())){
+        if (props.inputType.toLowerCase() == 'select' && props.options[0] ==""){
           console.log("SELECT should have at least 1 option")
           return false;
         }
-        if (props.inputType.toLocaleLowerCase() == 'text_input' && props.options[0] !=""){
+        if (props.inputType.toLowerCase() == 'text_input' && props.options[0] !=""){
           console.log("To many properties for TEXT_INPUT");
           return false;
         }
