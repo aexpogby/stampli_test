@@ -1,0 +1,17 @@
+textarea {
+    width: 500px;
+    height: 350px;
+    text-align: left;
+    padding-bottom: 100px;
+}
+.row {
+    border: 1px solid grey;
+    padding: 10px 0;
+}
+.col {
+    border-right: 1px solid darkgrey; 
+}
+label {
+    font-weight: bold;
+    padding-right: 10px;
+}
