@@ -61,7 +61,7 @@ export class AppComponent {
         continue;
       }
       
-      elementProps[5] = elementProps[5] || ""; // fix option param
+      elementProps[4] = elementProps[4] || ""; // fix option param
       tmpElement = new FormElement(
         elementProps[2] || "",
         elementProps[3] || "",
@@ -110,3 +110,14 @@ export class AppComponent {
     }
   }
 }
+
+
+
+/*
+input example:
+========================
+2;1;gender;SELECT;Male,Female 
+6;1;First Name;TEXT_INPUT;Enter your first name
+2;7;marital status;SELECT;Single,Maried,Divorced
+1;2;Last Name;TEXT_INPUT;Enter your last name
+*/
